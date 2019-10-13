@@ -1,0 +1,55 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage[a4paper]{geometry}
+\geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}
+\usepackage{fancyhdr}
+\usepackage{ulem}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{mhchem}
+\usepackage{siunitx}
+\usepackage{booktabs}
+
+\definecolor{myblue}{RGB}{0,0,139}
+\definecolor{myyellow}{RGB}{254,244,209}
+\newcommand\bluebf[1]{\heiti \textcolor{myblue}{\textbf{#1}} \rmfamily}
+
+\makeatletter
+\newcommand\dlmu[2][6cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\makeatother
+
+%实验信息
+\def\name{铂电极表面的电化学反应}
+\def\mytoday{\number\year .\number\month .\number\day}
+\def\expday{2019年9月18日}
+\def\exptmp{26.1$^{\circ}$C}
+\def\expprs{102.54 kPa}
+\def\zhaiyao{本实验通过循环伏安法，在不同扫描速度下绘制了被氮气饱和的硫酸溶液中铂电极的CV曲线，利用CV曲线中氢原子脱附峰的电量确定了铂电极的电化学活性面积，考察了不同搅拌速度对氧气饱和的硫酸溶液中铂电极的CV曲线的影响，并根据实验结果绘制了铂阴阳极的直接甲醇燃料电池的输出电压－输出功率曲线。}
+\def\keyword{循环伏安法;铂电极;电化学活性面积;直接甲醇燃料电池}
+
+\setCJKmainfont{SimSun}[AutoFakeBold]
+\newcommand\xiaobt{\fontsize{14pt}{14pt} \selectfont \noindent}
+\newcommand\zhengwen{\fontsize{12pt}{12pt} \selectfont \par}
+\newcommand\tupian{\fontsize{10pt}{10pt} \selectfont}
+\newcommand\mysection[2]{\xiaobt \bluebf{#1} \vspace*{3pt} \zhengwen #2 \vspace*{14pt} \par}
+\newcommand\myfig[2]{\begin{center}
+		\includegraphics[width=11cm]{#1} \\
+		\tupian #2 \end{center} \zhengwen}
+
+\newcommand\mysi[1]{\si[inter-unit-product = \ensuremath{{}\cdot{}}]{#1}}
+\def\my~{\ \textasciitilde}
+
+\begin{document}
+	\pagestyle{fancy} \lhead{物理化学实验} \chead{\name} \rhead{\mytoday}
+	\begin{titlepage}
+		\input{title.tex}
+	\end{titlepage}
+	\mysection{$\blacksquare$ 引言}{\input{introduction.tex}}
+	\mysection{$\blacksquare$ 实验部分}{\input{experimental.tex}}
+	\mysection{$\blacksquare$ 数据与结果}{\input{data.tex}}
+	\mysection{$\blacksquare$ 结果与讨论}{\input{result.tex}}
+	\mysection{$\blacksquare$ 参考文献}{\input{reference.tex}}
+	\clearpage
+\end{document}
